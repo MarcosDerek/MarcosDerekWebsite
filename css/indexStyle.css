@@ -1,0 +1,164 @@
+*{margin: 0; padding: 0;}
+
+body{
+	font-family: 'Roboto', sans-serif;
+}
+
+header{
+	position: relative;
+	height: 7vh;
+	width: 100%;
+	background-color: #111;
+	z-index: 2;
+}
+
+.button {
+	position: absolute;
+	margin-left: 5vw;
+	visibility: hidden;
+	display: inline-block;
+	cursor: pointer;
+}
+
+.bar1, .bar2, .bar3 {
+	width: 35px;
+	height: 4px;
+	background-color: #fff;
+	margin: 6px 0;
+	transition: 0.4s;
+}
+
+.change .bar1 {
+	-webkit-transform: rotate(-45deg) translate(-9px, 6px);
+	transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {
+	opacity: 0;
+}
+
+.change .bar3 {
+	-webkit-transform: rotate(45deg) translate(-5.5px, -5.5px);
+	transform: rotate(45deg) translate(-5.5px, -5.5px);
+}
+
+header > .navbar-brand > img{
+	position: absolute;
+	margin-top: 2vh;
+	margin-left: 20vw;
+	width: 150px;
+	float: left;
+}
+
+header > ul{
+	position: relative;
+	margin-top: 2vh;
+	margin-left: 60vw;
+	list-style-type: none;
+	margin-right: 50px;
+	display: inline-block;
+}
+
+header > ul > li{
+	list-style: none;
+	display: inline;
+	margin-left: 15px;
+}
+
+header > ul > li > a{
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+}
+
+header > ul > li > a:hover{
+	color: rgb(182, 182, 182);
+}
+
+main{
+	position: absolute;
+	height: 80vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+}
+
+main > h1{
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	font-size: 70px;
+	font-weight: bold;
+	color: #fff;
+}
+
+.background{
+	position: absolute;
+	height: 100vh;
+	width: 100%;
+	background-image: url("../images/background/4.jpg");
+	background-position: center center;
+	background-size: cover;
+	z-index: -2;
+}
+
+.overlay{
+	background-color: #000;
+	opacity: .60;
+	height: 100vh;
+	width: 100%;;
+	background-position: center center;
+	background-size: cover;
+	z-index: -1;
+}
+
+footer{
+	position: relative;
+	height: 5vh;
+	width: 100%;
+	background-color: #111;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+footer > a{
+	text-align: center;
+	text-decoration: none;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #fff;
+}
+
+@media screen and (max-width: 990px){
+	.button{
+		visibility: visible;
+	}
+
+	header > .navbar-brand > img{
+		position: absolute;
+		margin-top: 2vh;
+		margin-left: 42vw;
+		width: 150px;
+		float: left;
+	}
+	
+	header > ul{
+		visibility: hidden;
+		position: relative;
+		margin-top: 2vh;
+		margin-left: 60vw;
+		list-style-type: none;
+		margin-right: 50px;
+		display: inline-block;
+	}
+}
